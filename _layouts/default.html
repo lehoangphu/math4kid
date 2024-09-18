@@ -4,16 +4,11 @@
   <meta charset="UTF-8">
   <title>{{ page.title | escape }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Include any additional CSS files here -->
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
-  <!-- Page Content -->
   {{ content }}
 
-  <!-- MathJax Scripts -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- MathJax Script -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </body>
 </html>
