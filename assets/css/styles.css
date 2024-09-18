@@ -1,10 +1,30 @@
 /* General Styles */
-/* General Styles */
 body {
   font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f8ff;
+  line-height: 1.6; /* Added for better readability */
+}
+
+/* Content Container */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .content-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content-container {
+    padding: 10px;
+  }
 }
 
 /* Hero Section */
@@ -15,7 +35,7 @@ body {
   background-position: center;
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  /* Removed padding from .hero */
 }
 
 .hero::before {
@@ -28,10 +48,15 @@ body {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
 }
 
-.hero h1,
-.hero p {
+.hero .content-container {
+  padding: 100px 20px;
   position: relative;
   z-index: 1;
+}
+
+.hero h1,
+.hero p {
+  /* No changes needed here */
 }
 
 .hero h1 {
@@ -48,7 +73,7 @@ body {
 
 /* Lessons Section */
 #lessons {
-  padding: 50px 20px;
+  /* Removed padding from #lessons */
   text-align: center;
 }
 
@@ -81,7 +106,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
@@ -120,6 +145,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Details and Summary Styles */
 details {
   margin-bottom: 15px;
 }
