@@ -4,27 +4,27 @@ title: Home
 ---
 
 <div class="hero">
-  <h1>Welcome to Math for Kids!</h1>
-  <p>Explore the fun world of math with interactive lessons and exciting problems.</p>
-  <!-- Removed the "Start Learning" button -->
+  <div class="content-container">
+    <h1>Welcome to Math for Kids!</h1>
+    <p>Explore the fun world of math with interactive lessons and exciting problems.</p>
+  </div>
 </div>
 
 <section id="lessons">
-  <h2>Math Lessons</h2>
-  <div class="card-container">
-    {% for page in site.pages %}
-      {% if page.title and page.title != "Home" %}
-        <a href="{{ page.url | relative_url }}" class="card-link">
-          <div class="card">
-            <!-- Optionally add an icon or image -->
-            <!-- <img src="https://your-image-url.com/icon.png" alt="Lesson Icon" class="card-icon"> -->
-            <h3>{{ page.title }}</h3>
-            <p>{{ page.excerpt | strip_html | truncatewords: 20 }}</p>
-            <!-- Removed the "Read More" button -->
-          </div>
-        </a>
-      {% endif %}
-    {% endfor %}
+  <div class="content-container">
+    <h2>Math Lessons</h2>
+    <div class="card-container">
+      {% for page in site.pages %}
+        {% if page.title and page.title != "Home" %}
+          <a href="{{ page.url | relative_url }}" class="card-link">
+            <div class="card">
+              <h3>{{ page.title }}</h3>
+              <p>{{ page.excerpt | strip_html | truncatewords: 20 }}</p>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
