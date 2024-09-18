@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Explanation of How to Solve Problems
+title: SCIENCE of COUNTING
 ---
 
 ## Welcome Peter and Ryan to the SCIENCE of COUNTING
