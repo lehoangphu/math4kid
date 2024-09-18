@@ -1,4 +1,3 @@
-## Dear Peter and Ryan!
 ## Explanation of How to Solve Problems
 
 We are going to solve problems from **Repetition with Ordering** to **Repetition with No Ordering**. Let’s go step by step, including examples.
