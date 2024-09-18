@@ -119,3 +119,21 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+details {
+  margin-bottom: 15px;
+}
+
+summary {
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+details[open] summary::after {
+  content: " ▲";
+}
+
+summary::after {
+  content: " ▼";
+}
