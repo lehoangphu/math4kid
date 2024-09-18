@@ -1,41 +1,25 @@
+---
+layout: default
+title: Home
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File List</title>
+    <title>{{ site.title }}</title>
 </head>
 <body>
     <h1>Files in Repository</h1>
-    <ul id="file-list"></ul>
+    <ul>
+        {% for page in site.pages %}
+            {% if page.title and page.title != "Home" %}
+                <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 
-    <script>
-        async function fetchRepoFiles() {
-            const username = 'lehoangphu';  // Replace with your GitHub username
-            const repo = 'math4kid';    // Replace with your GitHub repository name
-
-            const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/`;
-
-            try {
-                const response = await fetch(apiUrl);
-                const files = await response.json();
-
-                const fileListElement = document.getElementById('file-list');
-
-                files.forEach(file => {
-                    const listItem = document.createElement('li');
-                    const fileLink = document.createElement('a');
-                    fileLink.href = file.html_url;
-                    fileLink.textContent = file.name;
-                    listItem.appendChild(fileLink);
-                    fileListElement.appendChild(listItem);
-                });
-            } catch (error) {
-                console.error('Error fetching files:', error);
-            }
-        }
-
-        fetchRepoFiles();
-    </script>
+    <!-- MathJax Script -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </body>
 </html>
