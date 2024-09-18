@@ -3,23 +3,25 @@ layout: default
 title: Home
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ site.title }}</title>
-</head>
-<body>
-    <h1>Files in Repository</h1>
-    <ul>
-        {% for page in site.pages %}
-            {% if page.title and page.title != "Home" %}
-                <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+<div class="hero">
+  <h1>Welcome to Math for Kids!</h1>
+  <p>Explore the fun world of math with interactive lessons and exciting problems.</p>
+  <a href="#lessons" class="cta-button">Start Learning</a>
+</div>
 
-    <!-- MathJax Script -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-</body>
-</html>
+<section id="lessons">
+  <h2>Math Lessons</h2>
+  <div class="card-container">
+    {% for page in site.pages %}
+      {% if page.title and page.title != "Home" %}
+        <div class="card">
+          <h3>{{ page.title }}</h3>
+          <p>{{ page.excerpt | strip_html | truncatewords: 20 }}</p>
+          <a href="{{ page.url | relative_url }}" class="button">Read More</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Optional: Add a footer or additional sections -->
