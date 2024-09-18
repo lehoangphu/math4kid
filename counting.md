@@ -3,7 +3,7 @@ layout: default
 title: Explanation of How to Solve Problems
 ---
 
-## Explanation of How to Solve Problems
+## Welcome Peter and Ryan to the SCIENCE of COUNTING
 
 We are going to solve problems from **Repetition with Ordering** to **Repetition with No Ordering**. Let’s go step by step, including examples.
 
